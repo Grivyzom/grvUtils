@@ -1,0 +1,55 @@
+# ====================================
+# grvUtils - Configuración Principal
+# ====================================
+
+# Configuración de Redis
+redis:
+  # Habilitar/deshabilitar Redis
+  enabled: true
+  # Host del servidor Redis
+  host: "localhost"
+  # Puerto del servidor Redis
+  port: 6379
+  # Contraseña de Redis (dejar vacío si no tiene)
+  password: "100@g30pQ404"
+  # Base de datos Redis (0-15)
+  database: 0
+  # Timeout de conexión en milisegundos
+  timeout: 2000
+  # Configuración del pool de conexiones
+  pool:
+    # Máximo número de conexiones en el pool
+    max-total: 20
+
+    # Máximo número de conexiones inactivas
+    max-idle: 10
+
+    # Mínimo número de conexiones inactivas
+    min-idle: 2
+
+# Configuración general del plugin
+general:
+  # Habilitar modo debug (muestra información adicional en consola)
+  debug: false
+
+  # Idioma del plugin (es/en)
+  language: "es"
+
+# ====================================
+# Configuración avanzada (opcional)
+# ====================================
+
+# Configuración del sistema de mensajería
+messaging:
+  # Prefijo para los canales de Redis
+  channel-prefix: "grvutils"
+  # Tamaño del buffer para mensajes
+  buffer-size: 1000
+
+# Configuración del sistema de caché
+cache:
+  # Prefijo para las claves de caché
+  key-prefix: "grvutils:cache"
+
+  # TTL por defecto en segundos (0 = sin expiración)
+  default-ttl: 3600
